@@ -1,0 +1,35 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How To Adjust Parent Scope On Route Change In AngularJS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/main.css">
+        <!--[if lt IE 9]>
+          <script src="bower_components/es5-shim/es5-shim.js"></script>
+          <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- Main controller that has scope on the body element -->
+    <body data-ng-app="AngularApp1" data-ng-controller="MainCtrl">
+        <!-- Header template include -->
+        <div data-ng-include="'views/layout/header.html'"></div>
+        <!-- Here all route-specific templates will be displayed -->
+        <div data-ng-view="" data-ng-cloak="">Loading...</div>
+        <!-- Javascript beside shivs goes here -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="scripts/app.js"></script>
+        <!-- Controllers -->
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/news.js"></script>
+        <!-- Directives -->
+        <script src="scripts/directives/headerMenu.js"></script>
+    </body>
+</html>
