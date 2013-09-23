@@ -11,12 +11,14 @@ angular.module('AngularApp1')
       // Watch "activePage" variable created in MainCtrl 
       // controller's scope
       scope.$watch('activePage', function(value) {
-        // On "activePage" variable change in scope - adjusted 
-        // currently active page link in header
+        // On "activePage" variable change in scope 
+        // - adjust currently active page anchor in 
+        // the header
         var activeLink = element.find('.' + value),
             activeClass = 'active';
         // Strip all anchors elements from "active" class
-        element.find('.' + activeClass).removeClass(activeClass);
+        element.find('.' + activeClass)
+                .removeClass(activeClass);
         activeLink.addClass(activeClass);
       });
     };
